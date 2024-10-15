@@ -1,0 +1,38 @@
+[
+	{
+		"language": "TH",
+		"label": [
+			{"name": "caption_title", "value": "ข้อมูลผลิตภัณฑ์"},
+			{"name": "sequence_headerlabel", "value": "ลำดับ"},
+			{"name": "nameen_label", "value": "ชื่อผลิตภัณฑ์ (ภาษาอังกฤษ)"},
+			{"name": "product_headerlabel", "value": "รหัสผลิตภัณฑ์"},
+			{"name": "nameen_headerlabel", "value": "ชื่อผลิตภัณฑ์"},
+			{"name": "nameens_label", "value": "ชื่อผลิตภัณฑ์"},
+			{"name": "url_label", "value": "ที่ตั้งหรือแหล่งที่มา"},
+			{"name": "sequence_label", "value": "ลำดับ"},
+			{"name": "products_label", "value": "รหัสผลิตภัณฑ์"},
+			{"name": "centerflag_label", "value": "สงวนสิทธิสำหรับการตั้งค่าจากส่วนกลาง"},
+			{"name": "product_label", "value": "รหัสผลิตภัณฑ์"},
+			{"name": "verified_label", "value": "ตรวจสอบการใช้งานผลิตภัณฑ์"},
+			{"name": "iconfile_label", "value": "ไอคอนไฟล์"},
+			{"name": "nameth_label", "value": "ผลิตภัณฑ์ (ภาษาไทย)"} ]
+	},
+	{
+		"language": "EN",
+		"label": [
+			{"name": "caption_title", "value": "Product Information"},
+			{"name": "sequence_headerlabel", "value": "Sequence"},
+			{"name": "nameen_label", "value": "Product Name (English)"},
+			{"name": "product_headerlabel", "value": "Product Code"},
+			{"name": "nameen_headerlabel", "value": "Product Name"},
+			{"name": "nameens_label", "value": "Product Name"},
+			{"name": "url_label", "value": "URL or Project Context"},
+			{"name": "sequence_label", "value": "Sequence"},
+			{"name": "products_label", "value": "Product Code"},
+			{"name": "centerflag_label", "value": "Reserved for center setting"},
+			{"name": "product_label", "value": "Product Code"},
+			{"name": "verified_label", "value": "Verify Product Permission"},
+			{"name": "iconfile_label", "value": "Icon File"},
+			{"name": "nameth_label", "value": "Product Name (Thai)"} ]
+	}
+]
