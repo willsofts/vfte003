@@ -193,8 +193,9 @@ export default {
         else $("#"+input).trigger("focus"); //if using id
       }
     },
-    showDialog() {
+    showDialog(callback) {
       //$("#modaldialog_layer").modal("show");
+      if(callback) $(this.$refs.dialogForm.$el).on("shown.bs.modal",callback);
       $(this.$refs.dialogForm.$el).modal("show");
     },  
     hideDialog() {
@@ -211,7 +212,7 @@ export default {
     },
     startInsertRecord() {
       this.resetRecord();
-      this.showDialog();
+      this.showDialog(() => { this.$refs.product.focus(); });
     },
     startSaveRecord() {
       confirmSave(() => {
@@ -251,8 +252,8 @@ export default {
               //reset data for new record insert
               this.resetRecord();
               setTimeout(() => { this.$refs.product.focus(); },100);
+              this.$emit('data-saved',dataRecord,data);
             });
-            this.$emit('data-saved',dataRecord,data);
           }
       });
     },
@@ -277,8 +278,8 @@ export default {
             if(detectErrorResponse(data)) return;
             successbox(() => {
               this.hideDialog();
+              this.$emit('data-updated',dataRecord,data);
             });
-            this.$emit('data-updated',dataRecord,data);
           }
       });
     },
@@ -304,7 +305,7 @@ export default {
             this.reset(data.body.dataset,{action:"edit"});
             this.v$.$reset();
             this.disabledKeyField = true;
-            this.showDialog();
+            this.showDialog(() => { this.$refs.nameen.focus(); });
           }
         }
       });	
@@ -328,8 +329,9 @@ export default {
           stopWaiting();
           console.log("deleteRecord: success",data);
           if(detectErrorResponse(data)) return;
-          successbox();
-          this.$emit('data-deleted',dataKeys,data);
+          successbox(() => { 
+            this.$emit('data-deleted',dataKeys,data);
+          });
         }
       });	
     },
