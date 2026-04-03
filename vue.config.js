@@ -27,5 +27,11 @@ module.exports = defineConfig({
         modules: path.join(__dirname, "node_modules")
       }
     },
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'config'),
+      publicPath: '/config' 
+    },
   }    
 })
